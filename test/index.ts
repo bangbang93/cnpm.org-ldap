@@ -10,6 +10,9 @@ describe('ldapUserService', function () {
   it('auth', async function () {
     await service.auth(process.env['LDAP_USER'], process.env['LDAP_PASSWORD'])
   })
+  it('reject with wrong credential', async function () {
+    should(await service.auth('1', '1')).be.null()
+  })
   it('get', async function () {
     const user = await service.get(process.env['LDAP_USER'])
     should(user).hasOwnProperty('login')
