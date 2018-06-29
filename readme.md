@@ -6,7 +6,7 @@
 ```javascript
 const cnpmLdap = require('cnpm.org-ldap').LdapUserService
 config.userService = new cnpmLdap('ldap://localhost', {
-  base: 'dc=example,dc=com',
+  base: 'ou=users,dc=example,dc=com',
   loginField: 'uid', // username attributes
 })
 ```
