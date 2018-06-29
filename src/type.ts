@@ -2,6 +2,7 @@ import * as tls from 'tls'
 
 export interface IOptions {
   loginField: string
+  base: string
   filter?: string
   attributes?: {
     email: string
@@ -10,10 +11,9 @@ export interface IOptions {
     avatar_url?: string
     im_url?: string
     site_admin?: string
-    scopes?: string[]
+    scopes?: string
   }
   tlsOptions?: tls.TlsOptions
-  base?: string
   dn?: string
   password?: string
 }
