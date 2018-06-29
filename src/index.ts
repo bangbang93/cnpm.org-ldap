@@ -26,6 +26,7 @@ class LdapUserService {
 
   async auth (login, password) {
     const user = await this.get(login)
+    if (!user) return null
     const client = ldap.createClient({
       url: this.url,
       tlsOptions: this.options.tlsOptions
