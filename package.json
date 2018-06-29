@@ -1,0 +1,33 @@
+{
+  "name": "cnpm.org-ldap",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "mocha --require ts-node/register --require should --exit",
+    "prepublish": "npm run build",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bangbang93/cnpm.org-ldap.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bangbang93/cnpm.org-ldap/issues"
+  },
+  "homepage": "https://github.com/bangbang93/cnpm.org-ldap#readme",
+  "dependencies": {
+    "ldapjs": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.3",
+    "@types/node": "^10.5.0",
+    "@types/should": "^13.0.0",
+    "mocha": "^5.2.0",
+    "should": "^13.2.1",
+    "ts-node": "^7.0.0"
+  }
+}
